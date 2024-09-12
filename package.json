@@ -1,17 +1,26 @@
 {
-  "name": "f.bnmwag.dev",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^4.15.4",
-    "@astrojs/check": "^0.9.3",
-    "typescript": "^5.6.2"
-  }
+	"name": "f.bnmwag.dev",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.3",
+		"@astrojs/tailwind": "^5.1.0",
+		"astro": "^4.15.4",
+		"astro-lenis": "^1.0.0",
+		"lenis": "^1.1.13",
+		"tailwindcss": "^3.4.11",
+		"three": "^0.168.0",
+		"typescript": "^5.6.2",
+		"vite-plugin-glsl": "^1.3.0"
+	},
+	"devDependencies": {
+		"@types/three": "^0.168.0"
+	}
 }
