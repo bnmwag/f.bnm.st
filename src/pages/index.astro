@@ -8,7 +8,27 @@
 		<meta name="description" content="Young Frontend Developer living in Linz, Austria" />
 		<meta name="keywords" content="Benjamin Wagner, Frontend Developer, Web Developer, Software Developer, bnmw, bnmwag" />
 
-		<link rel="stylesheet" href="/src/globals.css" />
+		<style>
+			:root {
+				color-scheme: light dark;
+				
+				--t-fn: cubic-bezier(0.77, 0, 0.175, 1);
+
+				--background: light-dark(#f5f5f5, #0b0b0a);
+				--foreground: light-dark(#0b0b0a, #f5f5f5);
+				--foreground-muted: light-dark(#737373, #a3a3a3);
+			}
+
+			body {
+				transition: background-color var(--t-fn) 1s, color var(--t-fn) 1s;
+				color: var(--foreground);
+				background-color: var(--background);
+			}
+
+			p { 
+				color: var(--foreground-muted); 
+			}
+		</style>
 	</head>
 	<body>
 		<main class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 pt-[50svh] pb-[15svh] gap-x-5 px-5 z-10 relative">
@@ -48,8 +68,7 @@
 		<div class="fixed max-xl:hidden inset-0 mix-blend-darken dark:mix-blend-lighten invert dark:invert-0"> 
 			<canvas id="canvas" class="w-full"></canvas>
 		</div>
-
-		<script is:inline src="/src/main.ts" type="module"></script>
 	</body>
 </html>
-
+	
+<script src="../main.ts"></script>
