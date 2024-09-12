@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://f.bnmwag.dev/sitemap-index.xml
