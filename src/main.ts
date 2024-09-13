@@ -58,9 +58,6 @@ const initializeScene = () => {
 	window.addEventListener("pointermove", (e: MouseEvent) => {
 		vMouse.set(e.pageX, e.pageY);
 	});
-	document.body.addEventListener("touchmove", (e) => e.preventDefault(), {
-		passive: false,
-	});
 
 	const geo = new THREE.PlaneGeometry(1, 1);
 	const mat = new THREE.ShaderMaterial({
