@@ -48,10 +48,10 @@ const initializeScene = () => {
 	window.addEventListener('resize', resize)
 
 	window.addEventListener('mousemove', (e: MouseEvent) => {
-		vMouse.set(e.pageX, e.pageY)
+		vMouse.set(e.clientX, e.clientY)
 	})
 	window.addEventListener('pointermove', (e: MouseEvent) => {
-		vMouse.set(e.pageX, e.pageY)
+		vMouse.set(e.clientX, e.clientY)
 	})
 
 	const geo = new THREE.PlaneGeometry(1, 1)
