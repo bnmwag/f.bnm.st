@@ -1,75 +1,43 @@
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Benjamin Wagner</title>
-		<meta name="description" content="Young Frontend Developer living in Linz, Austria" />
-		<meta name="keywords" content="Benjamin Wagner, Frontend Developer, Web Developer, Software Developer, bnmw, bnmwag" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
+---
+import Layout from '../components/layout.astro'
+---
 
-		<style>
-			:root {
-				color-scheme: light dark;
-				
-				--t-fn: cubic-bezier(0.77, 0, 0.175, 1);
-
-				--background: light-dark(#f5f5f5, #0b0b0a);
-				--foreground: light-dark(#0b0b0a, #f5f5f5);
-				--foreground-muted: light-dark(#737373, #a3a3a3);
-			}
-
-			body {
-				transition: background-color var(--t-fn) 1s, color var(--t-fn) 1s;
-				color: var(--foreground);
-				background-color: var(--background);
-			}
-
-			p { 
-				color: var(--foreground-muted); 
-			}
-		</style>
-	</head>
-	<body>
-		<main class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 pt-[50svh] pb-[15svh] gap-x-5 px-5 z-10 relative">
-			<div class="xl:col-start-2 md:col-span-2 max-md:absolute max-md:top-5 max-md:left-5 max-md:w-full max-md:h-full">	
-				<h1>Benjamin Wagner</h1>
-			</div>
-			<div class="md:col-start-3 xl:col-start-4 md:col-span-3 space-y-36">
-				<div class="space-y-12 max-md:max-w-md">
-					<h2>Frontend developer</h2>
-					<p>
-						Hi! I&apos;m Benjamin Wagner, a frontend developer based in Linz, Austria. 
-						I am passionate about building intuitive and user-centric digital experiences.
-						<br />
-						<br />
-						With expertise in PayloadCMS and Stripe, 
-						I'd love to help bring your online vision to life. Let's connect!
-					</p>
-				</div>
-				<div class="space-y-12 max-md:max-w-md">
-					<h2>Projects</h2>
-					<p>
-						For confidentiality and client discretion, I don't disclose specific 
-						project details publicly. However, I'm always happy to share more 
-						information with you directly - just get in touch whenever you're ready!
-					</p>
-				</div>
-				<div class="space-y-12 max-md:max-w-md">
-					<h2>Contact</h2>
-					<p>
-						<a href="mailto:bnm.wag@gmail.com">bnm.wag@gmail.com</a>
-						<br />
-						<a href="https://github.com/bnmwag">github.com/bnmwag</a>
-					</p>
-				</div>
-			</div>
-		</main>
-		<div class="fixed max-xl:hidden inset-0 mix-blend-darken dark:mix-blend-lighten invert dark:invert-0"> 
-			<canvas id="canvas" class="w-full"></canvas>
+<Layout>
+	<main class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 pt-[50svh] pb-[15svh] gap-x-5 px-5 z-10 relative">
+		<div class="xl:col-start-2 md:col-span-2 max-md:absolute max-md:top-5 max-md:left-5 max-md:w-full max-md:h-full">	
+			<h1>Benjamin Wagner</h1>
 		</div>
-	</body>
-</html>
-	
-<script src="../main.ts"></script>
+		<div class="md:col-start-3 xl:col-start-4 md:col-span-3 space-y-36">
+			<div class="space-y-12 max-md:max-w-md">
+				<h2>Frontend developer</h2>
+				<p class="text-foreground-muted">
+					Hi! I&apos;m Benjamin Wagner, a frontend developer based in Linz, Austria. 
+					I am passionate about building intuitive and user-centric digital experiences.
+					<br />
+					<br />
+					With expertise in PayloadCMS and Stripe, 
+					I'd love to help bring your online vision to life. Let's connect!
+				</p>
+			</div>
+			<div class="space-y-12 max-md:max-w-md">
+				<h2>Projects</h2>
+				<p class="text-foreground-muted">
+					For confidentiality and client discretion, I don't disclose specific 
+					project details publicly. However, I'm always happy to share more 
+					information with you directly - just get in touch whenever you're ready!
+				</p>
+			</div>
+			<div class="space-y-12 max-md:max-w-md">
+				<h2>Contact</h2>
+				<p class="text-foreground-muted">	
+					<a href="mailto:bnm.wag@gmail.com">bnm.wag@gmail.com</a>
+					<br />
+					<a href="https://github.com/bnmwag">github.com/bnmwag</a>
+				</p>
+			</div>
+		</div>
+	</main>
+	<div class="fixed max-xl:hidden inset-0 mix-blend-darken dark:mix-blend-lighten invert dark:invert-0"> 
+		<canvas id="canvas" class="w-full"></canvas>
+	</div>
+</Layout>
