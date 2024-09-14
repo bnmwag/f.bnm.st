@@ -1,6 +1,27 @@
 ---
 import Layout from '../components/layout.astro'
+import { AstroSeo } from '@astrolib/seo'
 ---
+
+<AstroSeo
+  title="Benjamin Wagner :: Frontend Developer"
+  description="Young Frontend Developer living in Linz, Austria."
+  openGraph={{
+    url: 'https://f.bnmwag.dev/',
+    title: 'Benjamin Wagner :: Frontend Developer',
+    description: 'Young Frontend Developer living in Linz, Austria.',
+    images: [
+      {
+        url: 'https://f.bnmwag.dev/og.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Benjamin Wagner :: Frontend Developer',
+        type: 'image/jpeg',
+      },
+    ],
+    site_name: 'Benjamin Wagner :: Frontend Developer',
+  }}
+/>
 
 <Layout>
 	<main class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 pt-[50svh] pb-[15svh] gap-x-5 px-5 z-10 relative">
