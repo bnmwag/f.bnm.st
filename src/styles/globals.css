@@ -5,3 +5,37 @@
 	--foreground: light-dark(#0b0b0a, #f5f5f5);
 	--foreground-muted: light-dark(#737373, #a3a3a3);
 }
+
+.prose h2 {
+	@apply text-2xl font-bold  mb-6;
+}
+.prose h2:not(:first-child){
+	@apply mt-20; 
+}
+.prose h3{
+	@apply text-xl font-bold mt-12 mb-6;
+}
+.prose h4{
+	@apply text-lg font-bold;
+}
+.prose p{
+	@apply text-base mt-6 text-foreground-muted;
+}
+.prose ul{
+	@apply list-disc mt-6;
+}
+.prose ol{
+	@apply list-decimal mt-6;
+}
+.prose li{
+	@apply text-foreground-muted;
+}
+.prose img{
+	@apply dark:bg-white;
+}
+.prose strong{
+	@apply font-bold;
+}
+.prose a {
+	@apply text-foreground-muted underline hover:text-white transition-colors duration-300
+}

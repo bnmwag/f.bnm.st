@@ -1,0 +1,53 @@
+---
+import Layout from '../components/layout.astro'
+import { AstroSeo } from '@astrolib/seo'
+---
+
+<AstroSeo
+  title="Benjamin Wagner :: Imprint"
+  description="Young Frontend Developer living in Linz, Austria."
+  openGraph={{
+    url: 'https://bnm.st/',
+    title: 'Benjamin Wagner :: Imprint',
+    description: 'Young Frontend Developer living in Linz, Austria.',
+    images: [
+      {
+        url: 'https://bnm.st/og.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Benjamin Wagner :: Imprint',
+        type: 'image/jpeg',
+      },
+    ],
+    site_name: 'Benjamin Wagner :: Imprint',
+  }}
+/>
+
+<Layout>
+	<main class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 pt-[50svh] pb-[15svh] gap-x-5 px-5 z-10 relative">
+		<div class="xl:col-start-2 md:col-span-2 max-md:absolute max-md:top-5 max-md:left-5 max-md:w-full max-md:h-full">	
+			<h1>Imprint</h1>
+		</div>
+		<div class="prose | md:col-start-3 xl:col-start-4 md:col-span-3">
+      <p class="!mt-0">Informationen über den Diensteanbieter.</p>
+      <p class="">Benjamin Wagner</p>
+      <p class="">Bäckerfeld 4, <br />4331 Naarn im Machlande, <br />Österreich</p>
+      <p>
+      <strong>Tel.:</strong> 06601009499<br />
+      <strong>E-Mail:</strong> <a href="mailto:bnm.wag@gmail.com">bnm.wag@gmail.com</a>
+      </p>
+      <div style="display:none">
+      </div>
+      <div style="display:none">
+      </div>
+      <div style="display:none">
+      </div>
+      <h2 id="eu-streitschlichtung" class=" fusion-responsive-typography-calculated" data-fontsize="24" style="--fontSize: 24;line-height: 1.5;--minFontSize: 24" data-lineheight="36px">EU-Streitschlichtung</h2>
+      <p class="">Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.<br />
+      Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter <a class="" href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE" target="_blank" rel="follow noopener">https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&amp;lng=DE</a> zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum.</p>
+      <p class="adsimple-122890790">Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p>Alle Texte sind urheberrechtlich geschützt.</p>
+      <p style="margin-top:15px">Quelle: Erstellt mit dem <a href="https://www.adsimple.at/impressum-generator/" title="Impressum Generator Österreich von AdSimple">Impressum Generator Österreich</a> von AdSimple</p>
+		</div>
+	</main>
+</Layout>
