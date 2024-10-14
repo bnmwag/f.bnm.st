@@ -1,17 +1,17 @@
 services:
   web:
     build: .
-    # labels:
-    #   - "traefik.enable=true"
-    #   - "traefik.http.routers.web.rule=Host(`bnmwag.dev`)"
-    #   - "traefik.http.routers.web.entrypoints=websecure"
-    #   - "traefik.http.routers.web.tls.certresolver=myresolver"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.web.rule=Host(`bnm.st`)"
+      - "traefik.http.routers.web.entrypoints=websecure"
+      - "traefik.http.routers.web.tls.certresolver=cert_resolver"
     ports:
       - 4321:4321
     volumes:
       - node_modules:/home/node/app/node_modules
-    # networks:
-    #   - net_tr
+    networks:
+      - net_tr
 
 networks:
   traefik-public:
