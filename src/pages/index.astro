@@ -5,17 +5,13 @@ import { AstroSeo } from '@astrolib/seo'
 const projects = [
 	{
 		name: 'Swine & Wine',
-		via: 'freelance',
 		url: 'https://swine-wine.net',
 		year: '2024',
-		previewImg: '/projects/swine-wine-preview.png',
 	},
 	{
 		name: 'OTT-JAKOB Gesamtspannsysteme',
-		via: 'SPS-Marketing',
 		url: 'https://www.ott-jakob.de/gesamtspannsysteme/',
 		year: '2023',
-		previewImg: '/projects/swine-wine-preview.png',
 	},
 ]
 ---
@@ -62,7 +58,6 @@ const projects = [
 				<div class="space-y-4">
 					{projects.map((project) => (
 						<a href={project.url} target="_blank" rel="noopener noreferrer" class="project block relative group">
-							{/* <span class="text-xs uppercase text-foreground-muted">{project.via}</span> */}
 							<svg 
 								xmlns="http://www.w3.org/2000/svg" 
 								width="24" 
@@ -76,9 +71,6 @@ const projects = [
 								<span>{project.name}</span>
 								<span class="text-foreground-muted text-xs"> _ {project.year}</span>
 							</p>
-							{/* <div class="preview | aspect-video h-40 absolute pointer-events-none">
-								<img src={project.previewImg} alt={project.name} class="w-full h-full object-cover" />
-							</div> */}
 						</a>
 					))}
 				</div>
