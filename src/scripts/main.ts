@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+import { gsap } from 'gsap'
 import vertexShader from '../shaders/vertex.glsl'
 import fragmentShader from '../shaders/fragment.glsl'
 
@@ -85,4 +86,28 @@ const initializeScene = () => {
 	update()
 }
 
+const initProjectPreviews = () => {
+	const projects = document.querySelectorAll('.project')
+
+	// when hovering the project, show the preview and move the preview after the mouse
+	for (const project of projects) {
+		const preview = project.querySelector('.preview') as HTMLElement
+
+		project.addEventListener('mousemove', (e: Event) => {
+			preview.classList.add('visible')
+
+			if (e instanceof MouseEvent) {
+				const x = e.pageX - preview.offsetLeft - preview.offsetWidth / 2
+				const y = e.pageY - preview.offsetTop - preview.offsetHeight / 2
+				gsap.to(preview, { x, y, ease: 'power4.out', duration: 1.5 })
+			}
+		})
+
+		project.addEventListener('mouseout', () => {
+			preview.classList.remove('visible')
+		})
+	}
+}
+
 initializeScene()
+// initProjectPreviews()

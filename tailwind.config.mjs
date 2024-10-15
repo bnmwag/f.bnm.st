@@ -8,6 +8,9 @@ export default {
 				foreground: 'var(--foreground)',
 				'foreground-muted': 'var(--foreground-muted)',
 			},
+			transitionTimingFunction: {
+				cubic: 'cubic-bezier(0.77, 0, 0.175, 1)',
+			},
 		},
 	},
 	plugins: [],

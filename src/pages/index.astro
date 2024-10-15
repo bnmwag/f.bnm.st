@@ -1,6 +1,23 @@
 ---
 import Layout from '../components/layout.astro'
 import { AstroSeo } from '@astrolib/seo'
+
+const projects = [
+	{
+		name: 'Swine & Wine',
+		via: 'freelance',
+		url: 'https://swine-wine.net',
+		year: '2024',
+		previewImg: '/projects/swine-wine-preview.png',
+	},
+	{
+		name: 'OTT-JAKOB Gesamtspannsysteme',
+		via: 'SPS-Marketing',
+		url: 'https://www.ott-jakob.de/gesamtspannsysteme/',
+		year: '2023',
+		previewImg: '/projects/swine-wine-preview.png',
+	},
+]
 ---
 
 <AstroSeo
@@ -42,18 +59,36 @@ import { AstroSeo } from '@astrolib/seo'
 			</div>
 			<div class="space-y-12 max-md:max-w-md">
 				<h2>Projects</h2>
-				<p class="text-foreground-muted">
-					For confidentiality and client discretion, I don't disclose specific 
-					project details publicly. However, I'm always happy to share more 
-					information with you directly - just get in touch whenever you're ready!
-				</p>
+				<div class="space-y-4">
+					{projects.map((project) => (
+						<a href={project.url} target="_blank" rel="noopener noreferrer" class="project block relative group">
+							{/* <span class="text-xs uppercase text-foreground-muted">{project.via}</span> */}
+							<svg 
+								xmlns="http://www.w3.org/2000/svg" 
+								width="24" 
+								height="24" 
+								viewBox="0 0 24 24"
+								class="absolute left-0 top-1/2 group-hover:-translate-y-1/2 translate-y-full opacity-0 -translate-x-8 group-hover:opacity-100 group-hover:translate-x-0 ease-cubic duration-300 transition-all"
+							>
+								<path fill="currentColor" d="M6 6v2h8.59L5 17.59L6.41 19L16 9.41V18h2V6z"/>
+							</svg>
+							<p class="group-hover:pl-8 ease-cubic duration-300 transition-all">
+								<span>{project.name}</span>
+								<span class="text-foreground-muted text-xs"> _ {project.year}</span>
+							</p>
+							{/* <div class="preview | aspect-video h-40 absolute pointer-events-none">
+								<img src={project.previewImg} alt={project.name} class="w-full h-full object-cover" />
+							</div> */}
+						</a>
+					))}
+				</div>
 			</div>
 			<div class="space-y-12 max-md:max-w-md">
 				<h2>Contact</h2>
-				<p class="text-foreground-muted">	
-					<a href="mailto:bnm.wag@gmail.com">bnm.wag@gmail.com</a>
+				<p>	 
+					<a class="text-foreground-muted hover:underline hover:text-white transition-colors duration-300" href="mailto:bnm.wag@gmail.com">bnm.wag@gmail.com</a>
 					<br />
-					<a href="https://github.com/bnmwag">github.com/bnmwag</a>
+					<a class="text-foreground-muted hover:underline hover:text-white transition-colors duration-300" href="https://github.com/bnmwag">github.com/bnmwag</a>
 				</p>
 			</div>
 		</div>
