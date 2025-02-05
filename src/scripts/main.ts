@@ -85,4 +85,6 @@ const initializeScene = () => {
 	update()
 }
 
-initializeScene()
+document.addEventListener('astro:page-load', () => {
+	initializeScene()
+})
