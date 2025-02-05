@@ -2,6 +2,7 @@
 	color-scheme: light dark;
 	
 	--background: light-dark(#f5f5f5, #000);
+	--background-muted: light-dark(#a3a3a3, #171717);
 	--foreground: light-dark(#0b0b0a, #f5f5f5);
 	--foreground-muted: light-dark(#737373, #a3a3a3);
 }

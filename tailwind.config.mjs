@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				background: 'var(--background)',
+				'background-muted': 'var(--background-muted)',
 				foreground: 'var(--foreground)',
 				'foreground-muted': 'var(--foreground-muted)',
 			},

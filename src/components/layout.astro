@@ -1,5 +1,6 @@
 ---
 import '../styles/globals.css'
+import { ClientRouter } from 'astro:transitions'
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@ import '../styles/globals.css'
 		<meta name="generator" content={Astro.generator} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<script defer is:inline data-domain="bnm.st" src="https://plausible.bnm.st/js/script.js"></script>
+		<ClientRouter />
 	</head>
     <body class="bg-background text-foreground transition-colors ease-in-out duration-1000">
 		<slot />
@@ -21,6 +23,7 @@ import '../styles/globals.css'
 			<div class="md:col-start-3 xl:col-start-4 md:col-span-3 space-y-36">
 				<nav>
 					<ul class="space-y-4">
+						<li><a href="/resume" class="text-foreground-muted hover:underline hover:text-white transition-colors duration-300">Resume</a></li>
 						<li><a href="/imprint" class="text-foreground-muted hover:underline hover:text-white transition-colors duration-300">Imprint</a></li>
 						<li><a href="/privacy" class="text-foreground-muted hover:underline hover:text-white transition-colors duration-300">Privacy</a></li>
 					</ul>
@@ -30,4 +33,3 @@ import '../styles/globals.css'
     </body>
 </html>
 	
-<script src="../scripts/main.ts"></script>
