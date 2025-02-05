@@ -8,14 +8,14 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://f.bnmwag.dev',
+	site: 'https://bnm.st',
 	integrations: [
 		tailwind(),
 		lenis(),
 		sitemap({
 			changefreq: 'never',
 			priority: 0.5,
-			lastmod: new Date('2024-09-12T21:11:38.271Z'),
+			lastmod: new Date('2025-02-05'),
 		}),
 	],
 	output: 'server',
