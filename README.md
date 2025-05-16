@@ -1,3 +1,3 @@
-# f.bnm.st
+# bnm.st
 
-my personal website built with [Astro](https://astro.build) and hosted on [Vercel](https://vercel.com).
+My personal website built with [Astro](https://astro.build) and hosted via [Dokploy](https://dokploy.com) on a VPS.
