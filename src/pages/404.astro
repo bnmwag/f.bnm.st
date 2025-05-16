@@ -1,0 +1,18 @@
+---
+import Layout from '../components/layout.astro'
+---
+
+<Layout>
+	<main class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 pt-[50svh] pb-[15svh] gap-x-5 px-5 z-10 relative">
+		<div class="xl:col-start-2 md:col-span-2 max-md:absolute max-md:top-5 max-md:left-5 max-md:w-full max-md:h-full">	
+			<div class="fixed left-0 top-0 right-0 h-44 bg-gradient-to-b from-background to-transparent" />
+			<h1 class="sticky top-12">404 Not Found</h1>
+		</div>
+		<div class="md:col-start-3 xl:col-start-4 md:col-span-3 space-y-36">
+			<div class="space-y-12 max-md:max-w-md">
+				<h2>The page you are looking for does not exist.</h2>
+				<a href="/" class="block text-foreground-muted hover:underline hover:text-white transition-colors duration-300 w-fit">Go back to safety</a>
+			</div>
+		</div>
+	</main>
+</Layout>

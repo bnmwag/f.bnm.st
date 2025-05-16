@@ -1,0 +1,35 @@
+---
+import Layout from '../../components/layout.astro'
+import { projects } from '../../data/projects'
+
+const { slug } = Astro.params
+const project = projects.find((project) => project.slug === slug)
+
+if (!project) return Astro.redirect('/404')
+---
+
+<Layout color={project.color}>
+	<main class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 pt-[50svh] pb-[15svh] gap-x-5 px-5 z-10 relative">
+		<div class="xl:col-start-2 md:col-span-2 max-md:absolute max-md:top-5 max-md:left-5 max-md:w-full max-md:h-full">	
+            <div class="fixed left-0 top-0 right-0 h-44 bg-gradient-to-b from-background to-transparent" />
+			<h1 class="sticky top-12">{project.name}</h1>
+		</div>
+		<div class="md:col-start-3 xl:col-start-4 md:col-span-3 space-y-36">
+			<div class="space-y-8 max-md:max-w-md">
+				<p class="text-foreground-muted">
+					{project.description}
+				</p>
+			</div>
+            {project.sections?.map((section) => (
+                <div class="space-y-8 max-md:max-w-md">
+                    <h2>{section.title}</h2>
+                    <div class="space-y-4 text-foreground-muted">
+                        {section.content.map((content) => (
+                            <p><Fragment set:html={content} /></p>
+                        ))}
+                    </div>
+                </div>
+            ))}
+		</div>
+	</main>
+</Layout>

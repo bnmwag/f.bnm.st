@@ -1,6 +1,8 @@
 ---
 import '../styles/globals.css'
 import { ClientRouter } from 'astro:transitions'
+
+const color = Astro.props.color
 ---
 
 <html lang="en">
@@ -14,7 +16,7 @@ import { ClientRouter } from 'astro:transitions'
 		<script defer is:inline data-domain="bnm.st" src="https://plausible.bnm.st/js/script.js"></script>
 		<ClientRouter />
 	</head>
-    <body class="bg-background text-foreground transition-colors ease-in-out duration-1000">
+    <body class="bg-background text-foreground transition-colors ease-in-out duration-1000" style={color ? `--background: ${color};` : ''}>
 		<slot />
 		<footer class="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-12 gap-x-5 px-5 z-10 relative pb-12 max-md:dark:border-t-neutral-800 max-md:border-t-neutral-200 max-md:border-t">
 			<div class="xl:col-start-2 md:col-span-2 max-md:mb-12 max-md:mt-12">	
