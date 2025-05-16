@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config'
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 import lenis from 'astro-lenis'
 import glsl from 'vite-plugin-glsl'
 import node from '@astrojs/node'
@@ -10,7 +10,6 @@ import sitemap from '@astrojs/sitemap'
 export default defineConfig({
 	site: 'https://bnm.st',
 	integrations: [
-		tailwind(),
 		lenis(),
 		sitemap({
 			changefreq: 'never',
@@ -23,6 +22,6 @@ export default defineConfig({
 		mode: 'standalone',
 	}),
 	vite: {
-		plugins: [glsl()], // top-level await present in the "four" library
+		plugins: [glsl(), tailwindcss()], // top-level await present in the "four" library
 	},
 })
